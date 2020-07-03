@@ -1,4 +1,5 @@
 #pragma once
+#include<stdio.h>
 
 class Application {
 	
@@ -12,5 +13,6 @@ Application::Application() {
 }
 
 void Application::run() {
+	printf("run application is running");
 
 }

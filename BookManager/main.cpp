@@ -3,5 +3,7 @@
 
 
 int main() {
-	//Start Application.
+    //Start Application.
+	Application* application = new Application();
+	application->run();
 }
