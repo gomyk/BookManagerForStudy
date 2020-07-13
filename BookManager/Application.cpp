@@ -3,8 +3,24 @@
 Application::Application() {
 	//Default constructor
 }
-void addbook() {
-	cout << "choose addbook";
+
+void Application::addbook() {
+	string title;
+	string author;
+
+	cout << "input from keyborad\n";
+	cout << "Input Title : ";
+	cin >> title;
+	cout << "Input Author :";
+	cin >> author;
+
+	Book* temp = new Book(title, author);
+	Book* position = head;
+	while (position->next != NULL) {
+		position = position->next;
+	}
+	position->next = temp;
+	temp->next = tail;
 };
 
 void search(){

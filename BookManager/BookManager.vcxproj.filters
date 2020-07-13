@@ -26,5 +26,8 @@
     <ClInclude Include="Application.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Book.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
