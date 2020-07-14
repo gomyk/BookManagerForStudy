@@ -2,14 +2,17 @@
 #include <iostream>
 #include <conio.h>
 #include "Book.h"
-using namespace std;
+
 class Application {
 private:
 	Book* head = NULL;
 	Book* tail = NULL;
 public:
-	Application();
+	Application() ;
 	void run();
-	void addbook();
+	void Addbook();
+	void Search();
+	void Delete();
+
 }; 
  

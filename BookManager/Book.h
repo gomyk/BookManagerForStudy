@@ -12,12 +12,7 @@ private:
 	string category;
 public:
 	Book* next = NULL;
-
-	Book(string title, string author) {
-		this->title = title;
-		this->author = author;
-	}
-
+	
 	Book(string title, string author, int pages, string publisher, int price, string category) {
 		this->title = title;
 		this->author = author;
@@ -26,10 +21,25 @@ public:
 		this->price = price;
 		this->category = category;
 	}
+	
+	string getTitle() {
+		return title;
+	};
+	string getauthor() {
+		return author;
+	};
+	string getpublisher() {
+		return publisher;
+	};
+	int getpages() {
+		return pages;
+	};
+	int getprice() {
+		return price;
+	};
+	string getcategory() {
+		return category;
+	};
 
-	string getTitle();
+	
 };
-
-string Book::getTitle() {
-	return title;
-}
