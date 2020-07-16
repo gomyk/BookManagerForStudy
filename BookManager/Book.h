@@ -12,6 +12,8 @@ private:
 	string category;
 public:
 	Book* next = NULL;
+
+	Book() { }
 	
 	Book(string title, string author, int pages, string publisher, int price, string category) {
 		this->title = title;
