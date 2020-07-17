@@ -27,10 +27,10 @@ public:
 	string getTitle() {
 		return title;
 	};
-	string getauthor() {
+	string getAuthor() {
 		return author;
 	};
-	string getpublisher() {
+	string getpuPlisher() {
 		return publisher;
 	};
 	int getpages() {

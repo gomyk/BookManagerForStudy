@@ -2,9 +2,12 @@
 #include <windows.h>
 
 Application::Application() {
+	head = new Book();
+	tail = new Book();
 	head->next = tail;
 	//Default constructor
 }
+
 
 void Application::Addbook() {
 	string title;
@@ -44,7 +47,7 @@ void Application::Search(){
 	while (1) {
 		Book* posit = head;
 		system("cls");
-		cout << "choose searcch" << endl << "sarch menu \n1.title \n2.author \n3.publisher\n4.category\n5.price\n6.pages";
+		cout << "choose search" << endl << "sarch menu \n1.title \n2.author \n3.publisher\n4.category\n5.price\n6.pages";
 		int input = _getch();
 		switch (input) {
 		case 49: {string title;
@@ -52,7 +55,7 @@ void Application::Search(){
 			cin >> title;
 			while (posit != tail){
 				if(posit->getTitle() == title){
-					cout << "***book founded***\n"<<"booktitle : "<<posit->getTitle()<< "\nbookaurthor : "<<posit->getauthor()<< "\nbookpublisher : "<<posit->getpublisher()<<"\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
+					cout << "***book founded***\n"<<"bookTitle : "<<posit->getTitle()<< "\nbookAuthor : "<<posit->getAuthor()<< "\nbookPublisher : "<<posit->getpuPlisher()<<"\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
 					int menu = _getch();
 					switch (menu) {
 					case 49: break;
@@ -73,8 +76,8 @@ void Application::Search(){
 			cout << "\ninput author that u wanna find :";
 			cin >> author;
 			while (posit != tail) {
-				if (posit->getauthor() == author) {
-					cout << "***book founded***\n" << "booktitle : " << posit->getTitle() << "\nbookaurthor : " << posit->getauthor() << "\nbookpublisher" << posit->getpublisher() << "\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
+				if (posit->getAuthor() == author) {
+					cout << "***book founded***\n" << "booktitle : " << posit->getTitle() << "\nbookaurthor : " << posit->getAuthor() << "\nbookpublisher" << posit->getpuPlisher() << "\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
 					int menu = _getch();
 					switch (menu) {
 					case 49: break;
@@ -95,8 +98,8 @@ void Application::Search(){
 			cout << "\ninput title that u wanna find :";
 			cin >> publisher;
 			while (posit != tail) {
-				if (posit->getpublisher() == publisher) {
-					cout << "***book founded***\n" << "booktitle : " << posit->getTitle() << "\nbookaurthor : " << posit->getauthor() << "\nbookpublisher" << posit->getpublisher() << "\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
+				if (posit->getpuPlisher() == publisher) {
+					cout << "***book founded***\n" << "booktitle : " << posit->getTitle() << "\nbookaurthor : " << posit->getAuthor() << "\nbookpublisher" << posit->getpuPlisher() << "\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
 					int menu = _getch();
 					switch (menu) {
 					case 49: break;
@@ -118,7 +121,7 @@ void Application::Search(){
 			cin >> category;
 			while (posit != tail) {
 				if (posit->getcategory() == category) {
-					cout << "***book founded***\n" << "booktitle : " << posit->getTitle() << "\nbookaurthor : " << posit->getauthor() << "\nbookpublisher" << posit->getpublisher() << "\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
+					cout << "***book founded***\n" << "booktitle : " << posit->getTitle() << "\nbookaurthor : " << posit->getAuthor() << "\nbookpublisher" << posit->getpuPlisher() << "\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
 					int menu = _getch();
 					switch (menu) {
 					case 49: break;
@@ -140,7 +143,7 @@ void Application::Search(){
 			cin >> price;
 			while (posit != tail) {
 				if (posit->getprice() == price) {
-					cout << "***book founded***\n" << "booktitle : " << posit->getTitle() << "\nbookaurthor : " << posit->getauthor() << "\nbookpublisher" << posit->getpublisher() << "\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
+					cout << "***book founded***\n" << "booktitle : " << posit->getTitle() << "\nbookaurthor : " << posit->getAuthor() << "\nbookpublisher" << posit->getpuPlisher() << "\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
 					int menu = _getch();
 					switch (menu) {
 					case 49: break;
@@ -162,7 +165,7 @@ void Application::Search(){
 			cin >> pages;
 			while (posit != tail) {
 				if (posit->getpages() == pages) {
-					cout << "***book founded***\n" << "booktitle : " << posit->getTitle() << "\nbookaurthor : " << posit->getauthor() << "\nbookpublisher" << posit->getpublisher() << "\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
+					cout << "***book founded***\n" << "booktitle : " << posit->getTitle() << "\nbookaurthor : " << posit->getAuthor() << "\nbookpublisher" << posit->getpuPlisher() << "\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
 					int menu = _getch();
 					switch (menu) {
 					case 49: break;
@@ -187,7 +190,7 @@ void Application::Search(){
 void Application::run() {
 	while (1) {
 		system("cls");
-		cout << "application is running" << endl << "1.addbook \n2.search \n3.program off\n";
+		cout << "application is running\n" << "1.addbook \n2.search \n3.program off\n";
 		int input = _getch();
 		switch (input) {
 		case 49: Addbook(); break;

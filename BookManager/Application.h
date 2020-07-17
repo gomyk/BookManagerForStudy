@@ -5,15 +5,20 @@
 
 class Application {
 private:
-	Book* head = new Book();
-	Book* tail = new Book();
+	Book* head;
+	Book* tail;
 public:
-	Application() ;
+	Application();
 	void run();
 	void Addbook();
 	void Search();
 	void Delete(Book* position);
 	void showlist();
+	void findtype(int n);
+	~Application() {
+		delete head;
+		delete tail;
 
+	}
 }; 
  
