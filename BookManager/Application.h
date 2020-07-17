@@ -14,7 +14,6 @@ public:
 	void Search();
 	void Delete(Book* position);
 	void showlist();
-	void findtype(int n);
 	~Application() {
 		delete head;
 		delete tail;
