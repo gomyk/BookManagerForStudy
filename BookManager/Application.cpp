@@ -47,7 +47,7 @@ void Application::Search(){
 	while (1) {
 		Book* posit = head;
 		system("cls");
-		cout << "choose search" << endl << "sarch menu \n1.title \n2.author \n3.publisher\n4.category\n5.price\n6.pages";
+		cout << "choose search\n" << "sarch menu \n1.title \n2.author \n3.publisher\n4.category\n5.price\n6.pages";
 		int input = _getch();
 		switch (input) {
 		case 49: {string title;
