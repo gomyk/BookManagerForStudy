@@ -37,6 +37,7 @@ void Application::Addbook() {
 	position->next = temp;
 	temp->next = tail;
 	cout << "Complete";
+	Sleep(10000);
 };
 
 void Application::Search(){
@@ -186,12 +187,12 @@ void Application::Search(){
 void Application::run() {
 	while (1) {
 		system("cls");
-		cout << "application is running" << endl << "1.addbook \n2.search \n";
+		cout << "application is running" << endl << "1.addbook \n2.search \n3.program off\n";
 		int input = _getch();
 		switch (input) {
 		case 49: Addbook(); break;
 		case 50: Search(); break;
-		case 8: return;
+		case 51: Sleep(1000); cout << "program off"; Sleep(1000); return;
 		}
 	}
 }
