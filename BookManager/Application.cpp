@@ -1,5 +1,4 @@
 #include "Application.h"
-#include <windows.h>
 
 Application::Application() {
 	head = new Book();
