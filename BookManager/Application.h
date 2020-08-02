@@ -14,6 +14,7 @@ public:
 	void Addbook();
 	void Search();
 	void Delete(Book* position);
+	void sort();
 	Book* searchbytype(string input, int n, Book* posit);
 	~Application() {
 		delete head; 

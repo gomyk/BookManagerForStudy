@@ -26,7 +26,7 @@ public:
 	}
 
 	void Bookinfo() {
-		cout << "***book founded***\n" << "bookTitle : " << getTitle() << "\nbookAuthor : " << getAuthor() << "\nbookPublisher : " << getPublisher() << "\n1.keep searching\n2.delete the book from program\n(press backpace to go back)";
+		cout  << "bookTitle : " << getTitle() << "\nbookAuthor : " << getAuthor() << "\nbookPublisher : " << getPublisher() ;
 		return;
 		}
 	string getTitle() {
