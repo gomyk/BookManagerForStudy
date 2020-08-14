@@ -14,9 +14,10 @@ public:
 	void Addbook();
 	void Search();
 	void Delete(Book* position);
-	void showlist();
+	void sort();
+	Book* searchbytype(string input, int n, Book* posit);
 	~Application() {
-		delete head;
+		delete head; 
 		delete tail;
 
 	}

@@ -6,16 +6,17 @@ class Book {
 private:
 	string title;
 	string author;
-	int pages;
+	string pages;
 	string publisher;
-	int price;
+	string price;
 	string category;
 public:
 	Book* next = NULL;
+	Book* prev = NULL;
 
 	Book() { }
 	
-	Book(string title, string author, int pages, string publisher, int price, string category) {
+	Book(string title, string author, string pages, string publisher, string price, string category) {
 		this->title = title;
 		this->author = author;
 		this->pages = pages;
@@ -23,20 +24,24 @@ public:
 		this->price = price;
 		this->category = category;
 	}
-	
+
+	void Bookinfo() {
+		cout  << "bookTitle : " << getTitle() << "\nbookAuthor : " << getAuthor() << "\nbookPublisher : " << getPublisher() ;
+		return;
+		}
 	string getTitle() {
 		return title;
 	};
 	string getAuthor() {
 		return author;
 	};
-	string getpuPlisher() {
+	string getPublisher() {
 		return publisher;
 	};
-	int getpages() {
+	string getpages() {
 		return pages;
 	};
-	int getprice() {
+	string getprice() {
 		return price;
 	};
 	string getcategory() {

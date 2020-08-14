@@ -41,6 +41,10 @@ int UI::selectMenu(int limit) {
 			pos = pos + 1 > limit-1 ? pos : pos + 1;
 			break;
 		}
+		case 77: {
+			system("cls");
+			return pos - base;
+        }//->
 		case 72: {
 			pos = pos - 1 < base ? pos : pos - 1;
 			break;
